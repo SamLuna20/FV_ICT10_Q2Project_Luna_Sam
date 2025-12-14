@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+    href="https://pyscript.net/releases/2024.1.1/core.css">
+        <script type="module" 
+    src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+        <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link
+    href='https://fonts.googleapis.com/css?family=Anton SC' rel='stylesheet'>
+        <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        />
+        <link rel="preconnect" 
+    href="https://fonts.googleapis.com">
+        <link rel="preconnect" 
+    href="https://fonts.gstatic.com" crossorigin>
+        <link 
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <title>ICT 10 PYTHON</title>
+
+        <!-- external and internal css -->
+        <link rel="stylesheet" href="style.css"></link>
+        <style>
+            h1{
+                font-weight: bold;
+                color: rgb(5, 40, 170);
+            }
+            h3{
+                font-weight: bold;
+                color: rgb(3, 120, 60);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand fw-bold">
+                    <img src="logo.png" class="me-2" width="50" height="50"><span>Operation Brotherhood Montessori Center</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page2.html">Grade Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page3.html">Clubs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- School Club Information -->
+        <div id="order" class="mt-5 container">
+            <h1 class="text-center mb-4">School Club Information</h1>
+                <p id="cname"></p>
+                <!-- For Club Form -->
+                <div class="mb-3">
+                    <h3>Select a Club:</h3>
+                    <br />
+                    <form>
+                        <select id="dropdown" class="form-select">
+                            <option value="volleyballvarsity">Volleyball Varsity</option>
+                            <option value="gleeclub">Glee Club</option>
+                            <option value="scienceclub">Science Club</option>
+                            <option value="marchingband">Marching Band</option>
+                            <option value="danceclub">Dance Club</option>
+                            <option value="mathclub">Math Club</option>
+                            <option value="cac">Communications Arts Club</option>
+                            <option value="cocc">Cadet Officer Candidate Course</option>
+                            <option value="ssclub">Social Science Club</option>
+                            <option value="basketballvarsity">Basketball Varsity</option>
+                        </select>
+                        </br>
+                        <div class="d-grid">
+                            <button type="button" py-click="show" class="btn btn-warning">Show Club Information</button> <br />
+                        </div>
+                    </form>
+                </div>
+                <!-- Club Information Result -->
+                <div id="clubinfo" class="d-none container">
+                    <p><span id="name"></span></p>
+                    <p><strong>Description: </strong><span id="description"></span></p>
+                    <p><strong>Meeting Time: </strong><span id="meetingtime"></span></p>
+                    <p><strong>Location: </strong><span id="location"></span></p>
+                    <p><strong>Advisor: </strong><span id="advisor"></span></p>
+                    <p><strong>Number of Members: </strong><span id="numofmembers"></span></p>
+                    <p><strong>Category: </strong><span id="category"></span></p>
+                </div>
+            </div>
+        </div>
+       
+        <!-- linking python codes -->
+        <script type="py" src="main.py"></script>
+    </body>
+</html>

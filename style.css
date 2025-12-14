@@ -1,0 +1,38 @@
+.navbar-custom {
+    background: #0c5e85;
+    background: linear-gradient(90deg,rgba(12, 94, 133, 1) 0%, rgba(40, 176, 97, 1) 30%, rgba(168, 176, 60, 1) 50%, rgba(191, 139, 50, 1) 70%, rgba(184, 53, 112, 1) 100%);
+}
+.school-section{
+    text-align: center;
+    padding: 80px 20px;
+    background-color: rgb(237, 237, 233);
+}
+span div{ 
+    /* hides all the other div inside the span tag */
+    display: none;
+}
+span div:last-child{ 
+    /* it will only show the last div inside span tag */
+    display: inline;
+}
+#clubinfo{
+    padding: 20px;
+    margin-top: 30px;
+    background-color: pink;
+    border-left: 7px solid cornflowerblue
+}
+#name{
+    font-weight: bold;
+    font-size: 25px
+}
+.card1{
+    background-color: rgb(221, 97, 186);
+}
+.card2{
+    background-color: rgb(112, 166, 112);
+}
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

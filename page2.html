@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <title>ICT 10 PYTHON</title>
+
+        <!-- external and internal CSS -->
+        <link rel="stylesheet" href="style.css"></link>
+
+        <style>
+            h1 {
+                color: #032b9a; /* dark blue text */
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <a class="navbar-brand fw-bold">
+                    <img src="logo.png" class="me-2" width="50" height="50"><span>Operation Brotherhood Montessori Center</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page2.html">Grade Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="page3.html">Clubs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="text-center mt-5"><strong>Student Grade Calculator</strong></h1>
+        <br />
+
+        <!-- Student Info -->
+        <div class="container d-flex justify-content-center mb-5 mt-3">
+            <div class="card p-4 card1" style="width: 800px;">
+            <h3 class="card-title mb-3">Student Information</h3>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="fname" class="form-label"><strong>First Name</strong></label>
+                        <input type="text" id="fname" class="form-control" placeholder="Enter first name">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="sname" class="form-label"><strong>Surname</strong></label>
+                        <input type="text" id="sname" class="form-control" placeholder="Enter surname">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="g_s" class="form-label"><strong>Grade & Section</strong></label>
+                        <input type="text" id="g_s" class="form-control" placeholder="ex: 10 - Ruby">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Grades -->
+        <div class="container d-flex justify-content-center mb-5 mt-3">
+            <div class="card p-4 card2" style="width: 800px;">
+            <h3 class="card-title mb-3">Enter your grades:</h3>
+                <div id="gradesform" class="container mb-5 mt-3">
+                    <div class="card p-5">
+                        <p><strong>Mathematics:</strong> <input id="math" type="number" min="0" max="100"></p>
+                        <p><strong>Filipino:</strong> <input id="filipino" type="number" min="0" max="100"></p>
+                        <p><strong>Science:</strong> <input id="science" type="number" min="0" max="100"></p>
+                        <p><strong>ICT:</strong> <input id="ict" type="number" min="0" max="100"></p>
+                        <p><strong>Music & Arts:</strong> <input id="m_a" type="number" min="0" max="100"></p>
+                        <p><strong>Social Studies:</strong> <input id="ss" type="number" min="0" max="100"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculate button -->
+        <div class="text-center mt-3">
+            <button py-click="general_weighted_average" class="btn btn-warning">Calculate GWA</button>
+        </div>
+        <br />
+
+        <!-- Show results -->
+        <div class="border p-3 mt-3 rounded mx-auto d-none mb-5" style="max-width: 800px; background-color: antiquewhite;" id="grades">
+            <p><span id="student_info"></span></p>
+            <pre><span id="summary"></span></pre>
+            <p><span id="output"></span></p>
+        </div>
+
+        <!-- linking python codes -->
+        <script type="py" src="main.py"></script>
+    </body>
+</html>
